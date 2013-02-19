@@ -8,7 +8,7 @@ The user story of this test is about event streaming from the Internet that we w
 
 ### Building from Source
 
-$ mvn install
+`$ mvn install -Dmaven.test.skip=true`
 
 ### Usage
 The project contains two modules: one is AvroMain which is the Kafka Producer test application.
@@ -30,7 +30,7 @@ Send event with GenericRecord class.
 
 **Second Test**
 Build Avro object using Generated Resources.
-This test will compile only after the code is generated using the Maven plugin 'avro-maven-plugin'.
+This test will compile only after the code is generated using the Maven plugin `avro-maven-plugin`.
 
 **Third Test**
 Serializes the Avro objects into file and then reads the file.
