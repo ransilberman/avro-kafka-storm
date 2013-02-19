@@ -1,0 +1,44 @@
+{
+  "type": "record",
+  "name": "LPEvent",
+  "doc": "LivePErson event",
+  "fields": [
+    {"name": "revision", "type": "long"},
+    {"name": "siteId", "type": "string"},
+    {"name": "eventType", "type": "string"},
+    {"name": "timeStamp", "type": "long"},
+    {"name": "sessionId", "type": "string"},
+    {"name": "subrecord",
+            "type":[
+            {
+            "name": "pline",
+            "type": "record",
+             "fields": [   {"name": "text", "type": "string"},
+                           {"name": "lineType", "type": "int"},
+                           {"name": "repId", "type": "string"}
+                       ]
+             },
+             {
+             "name": "impressionDisplay",
+             "type": "record",
+              "fields": [   {"name": "channel", "type": "int"},
+                            {"name": "impressionState", "type": "int"},
+                            {"name": "skillId", "type": "long"},
+                            {"name": "impDisplayObjId", "type": "long"}
+                        ]
+              },
+              {
+             "name": "impressionResponse",
+             "type": "record",
+              "fields": [   {"name": "channel", "type": "int"},
+                            {"name": "impressionState", "type": "int"},
+                            {"name": "skillId", "type": "long"},
+                            {"name": "agentId", "type": "long"},
+                            {"name": "impDisplayObjId", "type": "long"},
+                            {"name": "impResponseId", "type": "long"}
+                        ]
+              },
+              "null"
+          ]}
+      ]
+}
