@@ -38,5 +38,5 @@ Serializes the Avro objects into file and then reads the file.
 **upgrade Avro scema version**
 `AvroTopology2` is a second Storm topology that demonstrates how to use a schema that differs between producer and consumer.
 The difference in the code is in the line:
-$ DatumReader<GenericRecord> reader = new GenericDatumReader<GenericRecord>(_schema, _newSchema);
+`$ DatumReader<GenericRecord> reader = new GenericDatumReader<GenericRecord>(_schema, _newSchema);`
 Note that there are two parameters to the GenericDatumReader constructor.
